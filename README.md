@@ -11,7 +11,7 @@ All the names of the CSS in <code>zxx.lib.css</code> are short names. For exampl
 
 Note
 -------------------
-I recommend that <code>zxx.lib.css</code> should put behind after other CSS file link! As shown below:
+I recommend that <code>zxx.lib.css</code> should put behind after other CSS file! As shown below:
 <pre>&lt;link href="a.css" rel="stylesheet" /&gt;
 &lt;link href="b.css" rel="stylesheet" /&gt;
 &lt;link href="zxx.lib.css" rel="stylesheet" /&gt;</pre>
