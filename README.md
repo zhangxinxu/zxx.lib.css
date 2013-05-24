@@ -9,6 +9,12 @@ Actually, <code>zxx.lib.css</code> is a collection of these styles. It includes 
 
 All the names of the CSS in <code>zxx.lib.css</code> are short names. For example, <code>.dn</code> instead of <code>display:none</code>, <code>.db</code> instead of <code>display:block</code>, ...
 
+Note
+-------------------
+I recommend that <code>zxx.lib.css</code> should put behind after other CSS file link! As shown below:
+<pre>&lt;link href="a.css" rel="stylesheet" /&gt;
+&lt;link href="b.css" rel="stylesheet" /&gt;
+&lt;link href="zxx.lib.css" rel="stylesheet" /&gt;</pre>
 License
 --------------------------
 What's this? ![疑问](http://mat1.gtimg.com/www/mb/images/face/32.gif "疑问表情")
