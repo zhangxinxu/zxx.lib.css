@@ -156,7 +156,6 @@
 .pr30{padding-right:30px;}
 .pb30{padding-bottom:30px;}
 /* border-color name rule: border(b)-position(l/r/t/b/d)-width(null/2)-style(null/sh)-color(first one letter/first two letter) |-> All colors are safe color*/
-.bd0{border:0; outline:0;}
 .bdc{border:1px solid #ccc;}
 .blc{border-left:1px solid #ccc;}
 .brc{border-right:1px solid #ccc;}
@@ -274,6 +273,11 @@
 .dib_vm{display:inline-block; width:0; height:100%; vertical-align:middle;}
 /* 加载中背景图片 */
 .loading{background:url(http://www.zhangxinxu.com/study/image/loading.gif) no-repeat center;}
+/* 无框文本框文本域 */
+.bd_none{border:0; outline:none;}
+/* 按钮禁用 */
+.disabled{color:#acacac!important; border-color:#acacac!important; text-shadow:1px 1px #fff!important; outline:0!important; cursor:default!important; pointer-events:none;}
+.disabled:hover{text-decoration:none!important;}
 /*inline-block与float等宽列表*/
 .inline_box{font-size:1px; letter-spacing:-3px; font-family:Arial;}
 .inline_two, .inline_three, .inline_four, .inline_five, .inline_six, .inline_any{display:inline-block; *display:inline; font-size:12px; letter-spacing:0; vertical-align:top; *zoom:1;}
