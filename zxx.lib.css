@@ -11,9 +11,9 @@
                   去除.vimg{margin-bottom:-3px;}
 * 2013-05-24 v2.0 为开源到github上做大改
                   1. 增加margin负值范围
-				  2. margin/padding增加15px/30px组
-				  3. 中文字体改成英文字符表示，例如“微软雅黑” → "microsoft yahei"
-				  4. 新增border系列, background-color系列, width-percent系列以及.ell以下所有样式
+                  2. margin/padding增加15px/30px组
+                  3. 中文字体改成英文字符表示，例如“微软雅黑” → "microsoft yahei"
+                  4. 新增border系列, background-color系列, width(fixed value/percent value)系列以及.ell以下所有样式
 * 保留版权说明
 */
 
