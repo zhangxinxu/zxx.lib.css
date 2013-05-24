@@ -214,8 +214,9 @@
 .tdl{text-decoration:underline;}
 .tdn,.tdn:hover,.tdn a:hover,a.tdl:hover{text-decoration:none;}
 /* letter-spacing */
+.lt-1{letter-spacing:-1px;}
 .lt0{letter-spacing:0;}
-.t1{letter-spacing:1px;}
+.lt1{letter-spacing:1px;}
 /* white-space */
 .nowrap{white-space:nowrap;}
 /* word-wrap */
