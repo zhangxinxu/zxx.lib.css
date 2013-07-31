@@ -14,6 +14,7 @@
                   2. margin/padding增加15px/30px组
                   3. 中文字体改成英文字符表示，例如“微软雅黑” → "microsoft yahei"
                   4. 新增border系列, background-color系列, width(fixed value/percent value)系列以及.ell以下所有样式
+* 2013-07-31 v2.1 inline_any等12px字体大小限制去除，inline_box的-3px间距缩进改成-.25em, 以便适应各种字体大小环境
 * 保留版权说明
 */
 
@@ -271,7 +272,7 @@
 }
 /* 大小不定元素垂直居中 */
 .dib_vm{display:inline-block; width:0; height:100%; vertical-align:middle;}
-/* 加载中背景图片 */
+/* 加载中背景图片 - 如果您使用该CSS小库，务必修改此图片地址 */
 .loading{background:url(http://www.zhangxinxu.com/study/image/loading.gif) no-repeat center;}
 /* 无框文本框文本域 */
 .bd_none{border:0; outline:none;}
@@ -279,8 +280,8 @@
 .disabled{color:#acacac!important; border-color:#acacac!important; text-shadow:1px 1px #fff!important; outline:0!important; cursor:default!important; pointer-events:none;}
 .disabled:hover{text-decoration:none!important;}
 /*inline-block与float等宽列表*/
-.inline_box{font-size:1px; letter-spacing:-3px; font-family:Arial;}
-.inline_two, .inline_three, .inline_four, .inline_five, .inline_six, .inline_any{display:inline-block; *display:inline; font-size:12px; letter-spacing:0; vertical-align:top; *zoom:1;}
+.inline_box{font-size:1px; letter-spacing:-.25em; font-family:Arial;}
+.inline_two, .inline_three, .inline_four, .inline_five, .inline_six, .inline_any{display:inline-block; *display:inline; letter-spacing:0; vertical-align:top; *zoom:1;}
 .float_two, .float_three, .float_four, .float_five, .float_six,.float_seven{float:left;}
 .inline_two, .float_two{width:49.9%;}
 .inline_three, .float_three{width:33.3%;}
