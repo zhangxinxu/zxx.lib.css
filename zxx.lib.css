@@ -15,6 +15,7 @@
                   3. 中文字体改成英文字符表示，例如“微软雅黑” → "microsoft yahei"
                   4. 新增border系列, background-color系列, width(fixed value/percent value)系列以及.ell以下所有样式
 * 2013-07-31 v2.1 inline_any等12px字体大小限制去除，inline_box的-3px间距缩进改成-.25em, 以便适应各种字体大小环境
+* 2013-09-13 v2.2 12px字体大小限制修改为1px笔误了，应该为1em, 删除-ms-transition
 * 保留版权说明
 */
 
@@ -266,7 +267,6 @@
 .trans{
 	-webkit-transition:all 0.3s;
 	   -moz-transition:all 0.3s;
-	    -ms-transition:all 0.3s;
 	     -o-transition:all 0.3s;	
 	        transition:all 0.3s;
 }
@@ -280,7 +280,7 @@
 .disabled{color:#acacac!important; border-color:#acacac!important; text-shadow:1px 1px #fff!important; outline:0!important; cursor:default!important; pointer-events:none;}
 .disabled:hover{text-decoration:none!important;}
 /*inline-block与float等宽列表*/
-.inline_box{font-size:1px; letter-spacing:-.25em; font-family:Arial;}
+.inline_box{font-size:1em; letter-spacing:-.25em; font-family:Arial;}
 .inline_two, .inline_three, .inline_four, .inline_five, .inline_six, .inline_any{display:inline-block; *display:inline; letter-spacing:0; vertical-align:top; *zoom:1;}
 .float_two, .float_three, .float_four, .float_five, .float_six,.float_seven{float:left;}
 .inline_two, .float_two{width:49.9%;}

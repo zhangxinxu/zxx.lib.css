@@ -3,7 +3,7 @@ zxx.lib.css - a quick CSS layout library
 If the UI of your page is simple, meanwhile, you want to construct web pages quickly, this CSS library is very useful for you!
 Introduction
 ---------------
-As you known, some CSS styles are used very frequently. For example, <code>display:none</code> - the most commonly used method for hiding elements, <code>visibility:hidden:none</code> - a very useful method for hiding elements, and so on. 
+As you known, some CSS styles are used very frequently. For example, <code>display:none</code> - the most commonly used method for hiding elements, <code>visibility:hidden</code> - a very useful method for hiding elements, and so on. 
 
 Actually, <code>zxx.lib.css</code> is a collection of these styles. It includes <code>display</code>, <code>margin</code>, <code>padding</code>, <code>color</code>(web safe color), <code>font</code> refer, <code>vertical-align</code>, <code>float</code>, ..., and many other common styles. In addition to these styles, some group styles that I think useful are also in.
 
