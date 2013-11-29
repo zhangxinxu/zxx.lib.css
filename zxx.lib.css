@@ -1,5 +1,8 @@
 /*!
 * by zhangxinxu(.com) 2010-?
+* under MIT license
+*/
+/*
 * 2010-07-12 v1.0
 * 2010-07-21 v1.1 添加block元素居中之auto属性，增加鼠标手形样式
 * 2010-09-17 v1.2 添加z-index层级属性
@@ -17,7 +20,7 @@
 * 2013-07-31 v2.1 inline_any等12px字体大小限制去除，inline_box的-3px间距缩进改成-.25em, 以便适应各种字体大小环境
 * 2013-09-13 v2.2 12px字体大小限制修改为1px笔误了，应该为1em, 删除-ms-transition
 * 2013-10-11 v2.3 float_seven一直没删除，清掉。增加两个绝对定位隐藏：abs_out和abs_clip
-* 保留版权说明
+* 2013-11-23 v2.4 add p0, ova, f18. 去除trans中-moz-和-o-私有前缀
 */
 
 /* ---------------------single CSS----------------------- */
@@ -123,6 +126,7 @@
 .mt-20{margin-top:-20px;}
 .mb-20{margin-bottom:-20px;}
 /* padding */
+.p0{padding:0;}
 .p1{padding:1px;}
 .pl1{padding-left:1px;}
 .pt1{padding-top:1px;}
@@ -195,6 +199,7 @@
 .f13{font-size:13px;}
 .f14{font-size:14px;}
 .f16{font-size:16px;}
+.f18{font-size:16px;}
 .f20{font-size:20px;}
 .f24{font-size:24px;}
 /* font-family */
@@ -245,6 +250,7 @@
 .def{cursor:default;}
 /* overflow */
 .ovh{overflow:hidden;}
+.ova{overflow:auto;}
 /* visibility */
 .vh{visibility:hidden;}
 .vv{visibility:visible;}
@@ -266,9 +272,7 @@
 .ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 /* css3过渡动画效果 */
 .trans{
-	-webkit-transition:all 0.3s;
-	   -moz-transition:all 0.3s;
-	     -o-transition:all 0.3s;	
+	-webkit-transition:all 0.3s;	
 	        transition:all 0.3s;
 }
 /* 大小不定元素垂直居中 */
