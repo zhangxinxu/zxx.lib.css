@@ -24,6 +24,12 @@
 * 2013-11-23 v2.4 add p0, ova, f18. 去除trans中-moz-和-o-私有前缀
 * 2014-02-26 v2.5 fix two name mistake
 * 2014-02-27 v2.6 add fl
+* 2015-02-08 v2.7 具体改动有：
+                  1. 添加h0
+                  2. 修改 .vn -2px → -4px
+				  3. zoom增加webkit重绘修复
+				  4. 去除.trans非webkit私有前缀
+				  5. loading背景图使用about:blank代替
 */
 
 /* ---------------------single CSS----------------------- */
@@ -33,6 +39,7 @@
 .db{display:block;}
 .dib{display:inline-block;} /* if the element is block level(eg. div, li), using 'inline_any' instead */
 /* height */
+.h0{height:0;}
 .h14{height:14px;}
 .h16{height:16px;}
 .h18{height:18px;}
@@ -237,7 +244,7 @@
 .vtb{vertical-align:text-bottom;}
 .vb{vertical-align:bottom;}
 .vt{vertical-align:top;}
-.vn{vertical-align:-2px;}
+.vn{vertical-align:-4px;}
 /* float */
 .l{float:left;}
 .r{float:right;}
@@ -259,7 +266,7 @@
 .vh{visibility:hidden;}
 .vv{visibility:visible;}
 /* zoom */
-.z{*zoom:1;}
+.z{*zoom:1; -webkit-transform: translateZ(0);}
 
 
 /* ------------------- multiply CSS ------------------ */
@@ -282,7 +289,7 @@
 /* 大小不定元素垂直居中 */
 .dib_vm{display:inline-block; width:0; height:100%; vertical-align:middle;}
 /* 加载中背景图片 - 如果您使用该CSS小库，务必修改此图片地址 */
-.loading{background:url(http://www.zhangxinxu.com/study/image/loading.gif) no-repeat center;}
+.loading{background:url(about:blank) no-repeat center;}
 /* 无框文本框文本域 */
 .bd_none{border:0; outline:none;}
 /* 绝对定位隐藏 */
