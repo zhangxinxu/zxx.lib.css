@@ -27,20 +27,20 @@
 * 2015-02-08 v2.7 具体改动有：
                   1. 添加h0
                   2. 修改 .vn -2px → -4px
-				  3. zoom增加webkit重绘修复
-				  4. 去除.trans非webkit私有前缀
-				  5. loading背景图使用about:blank代替
+                  3. zoom增加webkit重绘修复
+                  4. 去除.trans非webkit私有前缀
+                  5. loading背景图使用about:blank代替
 * 2015-02-09 v2.8 具体改动有：
                   1. 添加.lh0
                   2. 移除.f10, .f13, 添加f28，因为现代web站点字号越来越大
-				  3. .n添加white-space: normal声明
-				  4. 移除.vn使用具体负值代替，因为图标+不同字号，vertical-align的负值也不同，新增.v-1 ~ .v-5 按钮与文字的垂直对齐也可使用，兼容IE6+
-				  5. 移除.z中-webkit-transform: translateZ(0)此声明虽然能修复一些重绘问题，但同时也会带来垂直位置，position:fixed限制，影响overflow对absolute元素限制等一系列问题，移除之~
-				  6. 移除cell_bk, 若遭遇不换行问题，使用.cell_ovh代替~
-				  7. .trans中时间0.3s → .3s
-				  8. .disabled禁用大改造，使适用性更广泛
-				  9. 增加.opa0 透明度0
-				  10. float percent more accurate for IE8+
+                  3. .n添加white-space: normal声明
+                  4. 移除.vn使用具体负值代替，因为图标+不同字号，vertical-align的负值也不同，新增.v-1 ~ .v-5 按钮与文字的垂直对齐也可使用，兼容IE6+
+                  5. 移除.z中-webkit-transform: translateZ(0)此声明虽然能修复一些重绘问题，但同时也会带来垂直位置，position:fixed限制，影响overflow对absolute元素限制等一系列问题，移除之~
+                  6. 移除cell_bk, 若遭遇不换行问题，使用.cell_ovh代替~
+                  7. .trans中时间0.3s → .3s
+                  8. .disabled禁用大改造，使适用性更广泛
+                  9. 增加.opa0 透明度0
+                  10. float percent more accurate for IE8+
 * 2016-03-25 v2.9 本次改动有：
                   1. fix w300宽度值为280px的错误
                   2. dib增加div,p等标签的IE7特别处理，之前建议使用inline_any
