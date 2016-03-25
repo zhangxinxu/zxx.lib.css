@@ -41,6 +41,12 @@
 				  8. .disabled禁用大改造，使适用性更广泛
 				  9. 增加.opa0 透明度0
 				  10. float percent more accurate for IE8+
+* 2016-03-25 v2.9 本次改动有：
+                  1. fix w300宽度值为280px的错误
+                  2. dib增加div,p等标签的IE7特别处理，之前建议使用inline_any
+                  3. add h30, lh30，因为随着大屏普及，页面元素尺寸更大了
+                  4. transition时间从.3s → .15s
+                  5. pointer-events增加-ms-私有前缀for IE10+
 */
 
 /* ---------------------single CSS----------------------- */
@@ -48,15 +54,17 @@
 .dn{display:none;}
 .di{display:inline;}
 .db{display:block;}
-.dib{display:inline-block;} /* if the element is block level(eg. div, li), using 'inline_any' instead */
+.dib{display:inline-block;}
+div.dib, p.div{*display:inline; *zoom:1;}/* other block level tag(eg. li, h1~h6), using 'inline_any' instead */
 /* height */
 .h0{height:0;}
-.h14{height:14px;}
+.h16{height:14px;}
 .h16{height:16px;}
 .h18{height:18px;}
 .h20{height:20px;}
 .h22{height:22px;}
 .h24{height:24px;}
+.h30{height:30px;}
 /* width */
 /* fixed width value */
 .w20{width:20px;}
@@ -71,7 +79,7 @@
 .w220{width:220px;}
 .w250{width:250px;}
 .w280{width:280px;}
-.w300{width:280px;}
+.w300{width:300px;}
 .w320{width:320px;}
 .w360{width:360px;}
 .w400{width:400px;}
@@ -98,12 +106,13 @@
 .pct100{width:100%;}
 /* line-height */
 .lh0{line-height:0;}
-.lh14{line-height:14px;}
+.lh16{line-height:14px;}
 .lh16{line-height:16px;}
 .lh18{line-height:18px;}
 .lh20{line-height:20px;}
 .lh22{line-height:22px;}
 .lh24{line-height:24px;}
+.lh30{line-height:30px;}
 /* margin */
 .m0{margin:0;}
 .ml1{margin-left:1px;}
@@ -290,7 +299,7 @@
 /* ------------------- multiply CSS ------------------ */
 /* 块状元素水平居中 */
 .auto{margin-left:auto; margin-right:auto;}
-/* 清除浮 动*/
+/* 清除浮动*/
 .fix{*zoom:1;}
 .fix:after{display:table; content:''; clear:both;}
 /* 基于display:table-cell的自适应布局 */
@@ -301,8 +310,8 @@
 .ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 /* css3过渡动画效果 */
 .trans{
-	-webkit-transition:all .3s;	
-	        transition:all .3s;
+	-webkit-transition:all .15s;	
+	        transition:all .15s;
 }
 /* 大小不定元素垂直居中 */
 .dib_vm{display:inline-block; width:0; height:100%; vertical-align:middle;}
@@ -314,7 +323,7 @@
 .abs_out{position:absolute; left:-999em; top:-999em;}
 .abs_clip{position:absolute; clip:rect(0 0 0 0);}
 /* 按钮禁用 */
-.disabled{outline:0 none; cursor:default!important; opacity:.4; filer:alpha(opacity=40); pointer-events:none;}
+.disabled{outline:0 none; cursor:default!important; opacity:.4; filer:alpha(opacity=40); -ms-pointer-events:none; pointer-events:none;}
 /*inline-block与float等宽列表*/
 .inline_box{font-size:1em; letter-spacing:-.25em; font-family:Arial;}
 .inline_two, .inline_three, .inline_four, .inline_five, .inline_six, .inline_any{display:inline-block; *display:inline; letter-spacing:0; vertical-align:top; *zoom:1;}
