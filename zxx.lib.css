@@ -3,7 +3,10 @@
 * https://github.com/zhangxinxu/zxx.lib.css
 * under MIT license
 */
-/* fork:https://github.com/l0f5c7bf/zxx.lib.css 根据个人习惯调整，顺手就好，如非必要，请不要再项目中修改此文件 */
+/* 
+	fork:https://github.com/l0f5c7bf/zxx.lib.css 根据个人习惯调整，顺手就好，如非必要，请不要再项目中修改此文件 
+	cdn:https://cdn.rawgit.com/l0f5c7bf/zxx.lib.css/master/zxx.lib.css
+*/
 /* ---------------------single CSS----------------------- */
 
 /*危险属性*/
@@ -185,6 +188,8 @@
 .f28{font-size:28px;}
 /* font-style */
 .fn{font-weight:normal; font-style:normal; white-space: normal;}
+/*writing-mode*/
+.wr{writing-mode: tb-rl; -webkit-writing-mode: vertical-rl; writing-mode: vertical-rl; *writing-mode: tb-rl;}
 /* text-align */
 .tc{text-align:center;}
 .tr{text-align:right;}
