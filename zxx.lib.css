@@ -263,8 +263,44 @@
 .silver{color: #ddd;}
 .gray{color: #aaa;}
 .black{color: #111;}
+
+/*flex*/
+.flex .row{display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -moz-flex;display: -ms-flexbox;display: flex;width: 100%;}
+.flex .col{-webkit-box-flex: 1;-webkit-flex: 1;-moz-box-flex: 1;-moz-flex: 1;-ms-flex: 1;flex: 1;display: block;width: 100%;}.row-top{-webkit-box-align: start;-ms-flex-align: start;-webkit-align-items: flex-start;-moz-align-items: flex-start;align-items: flex-start;}
+.flex .row-bottom{-webkit-box-align: end;-ms-flex-align: end;-webkit-align-items: flex-end;-moz-align-items: flex-end;align-items: flex-end;}
+.flex .row-center{-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;-moz-align-items: center;align-items: center;}
+.flex .row-stretch{-webkit-box-align: stretch;-ms-flex-align: stretch;-webkit-align-items: stretch;-moz-align-items: stretch;align-items: stretch;}
+.flex .row-baseline{-webkit-box-align: baseline;-ms-flex-align: baseline;-webkit-align-items: baseline;-moz-align-items: baseline;align-items: baseline;}.col-top{-webkit-align-self: flex-start;-moz-align-self: flex-start;-ms-flex-item-align: start;align-self: flex-start;}
+.flex .col-bottom{-webkit-align-self: flex-end;-moz-align-self: flex-end;-ms-flex-item-align: end;align-self: flex-end;}
+.flex .col-center{-webkit-align-self: center;-moz-align-self: center;-ms-flex-item-align: center;align-self: center;}
+.flex .col-offset-10{margin-left: 10%;}
+.flex .col-offset-20{margin-left: 20%;}
+.flex .col-offset-25{margin-left: 25%;}
+.flex .col-offset-33{margin-left: 33.3333%;}
+.flex .col-offset-50{margin-left: 50%;}
+.flex .col-offset-66{margin-left: 66.6666%;}
+.flex .col-offset-75{margin-left: 75%;}
+.flex .col-offset-80{margin-left: 80%;}
+.flex .col-offset-90{margin-left: 90%;}
+.flex .col-10{-webkit-box-flex: 0;-webkit-flex: 0 0 10%;-moz-box-flex: 0;-moz-flex: 0 0 10%;-ms-flex: 0 0 10%;flex: 0 0 10%;max-width: 10%;}
+.flex .col-20{-webkit-box-flex: 0;-webkit-flex: 0 0 20%;-moz-box-flex: 0;-moz-flex: 0 0 20%;-ms-flex: 0 0 20%;flex: 0 0 20%;max-width: 20%;}
+.flex .col-25{-webkit-box-flex: 0;-webkit-flex: 0 0 25%;-moz-box-flex: 0;-moz-flex: 0 0 25%;-ms-flex: 0 0 25%;flex: 0 0 25%;max-width: 25%;}
+.flex .col-33{-webkit-box-flex: 0;-webkit-flex: 0 0 33.3333%;-moz-box-flex: 0;-moz-flex: 0 0 33.3333%;-ms-flex: 0 0 33.3333%;flex: 0 0 33.3333%;max-width: 33.3333%;}
+.flex .col-50{-webkit-box-flex: 0;-webkit-flex: 0 0 50%;-moz-box-flex: 0;-moz-flex: 0 0 50%;-ms-flex: 0 0 50%;flex: 0 0 50%;max-width: 50%;}
+.flex .col-66{-webkit-box-flex: 0;-webkit-flex: 0 0 66.6666%;-moz-box-flex: 0;-moz-flex: 0 0 66.6666%;-ms-flex: 0 0 66.6666%;flex: 0 0 66.6666%;max-width: 66.6666%;}
+.flex .col-75{-webkit-box-flex: 0;-webkit-flex: 0 0 75%;-moz-box-flex: 0;-moz-flex: 0 0 75%;-ms-flex: 0 0 75%;flex: 0 0 75%;max-width: 75%;}
+.flex .col-80{-webkit-box-flex: 0;-webkit-flex: 0 0 80%;-moz-box-flex: 0;-moz-flex: 0 0 80%;-ms-flex: 0 0 80%;flex: 0 0 80%;max-width: 80%;}
+.flex .col-90{-webkit-box-flex: 0;-webkit-flex: 0 0 90%;-moz-box-flex: 0;-moz-flex: 0 0 90%;-ms-flex: 0 0 90%;flex: 0 0 90%;max-width: 90%;}
+
 /*12列百分比列*/ .col-12{width: 100%} .col-11{width: 91.66666667%} .col-10{width: 83.33333333%} .col-9{width: 75%} .col-8{width: 66.66666667%} .col-7{width: 58.33333333%} .col-6{width: 50%} .col-5{width: 41.66666667%} .col-4{width: 33.33333333%} .col-3{width: 25%} .col-2{width: 16.66666667%} .col-1{width: 8.33333333%}
+
+
 /* ------------------- multiply CSS ------------------ */
+/*按钮*/
+.button{display: inline-block; padding: .5em 1em; border: 0 none; border: 1px solid rgba(0,0,0,.25);  background-image: none; box-shadow: 0 1px rgba(0,0,0,.15), inset 0 1px rgba(255,255,255,.15); color: #fff; text-align: center; text-decoration: none; text-shadow: 1px 1px rgba(0,0,0,.1); font-size: 100%; font-family: inherit; font-weight: inherit; white-space: nowrap; -webkit-user-select: none; -moz-user-select: none; user-select: none; overflow: visible; cursor: pointer;}
+.button:hover, .button:focus{text-decoration: none; background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.1));}
+.button:focus{outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px;}
+.button:active{box-shadow: 0 1px rgba(0,0,0,.2), inset 0 1px rgba(0,0,0,.05); outline: none;}
 /* 块状元素水平居中 */
 .auto,.container{margin-left:auto; margin-right:auto;}
 /* 清除浮动*/
@@ -289,3 +325,6 @@
 .abs_clip{position:absolute; clip:rect(0 0 0 0);}
 /* 按钮禁用 */
 .disabled{outline:0 none; cursor:default!important; opacity:.4; filer:alpha(opacity=40); -ms-pointer-events:none; pointer-events:none;}
+
+
+
