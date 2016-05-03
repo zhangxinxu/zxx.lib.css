@@ -58,7 +58,7 @@
 div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), using 'inline_any' instead */
 /* height */
 .h0{height:0;}
-.h16{height:14px;}
+.h14{height:14px;}
 .h16{height:16px;}
 .h18{height:18px;}
 .h20{height:20px;}
