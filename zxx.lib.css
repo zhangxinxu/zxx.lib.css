@@ -3,59 +3,17 @@
 * https://github.com/zhangxinxu/zxx.lib.css
 * under MIT license
 */
-/*
-* 2010-07-12 v1.0
-* 2010-07-21 v1.1 添加block元素居中之auto属性，增加鼠标手形样式
-* 2010-09-17 v1.2 添加z-index层级属性
-* 2010-09-29 v1.3 添加break-word属性
-* 2010-11-12 v1.4 添加white-space:nowrap;值，去掉Georgia字体
-* 2011-01-17 v1.5 去除red颜色，添加cell双栏自适应属性，z样式影响扩至IE7，样式位置以及顺序调整，dib样式忽略Firefox 2，去除Lucida Console字体，添加Verdana字体，添加letter-spacing样式
-* 2011-07-28 v1.6 增加vertical-align:bottom属性，增加点点点效果多样
-* 2012-01-18 v1.7 点点点效果样式去除-moz-前缀，多余；增加修复cell下连续单词字符换行问题；去除.ovs{overflow:scroll;}
-                  去除.vimg{margin-bottom:-3px;}
-* 2013-05-24 v2.0 为开源到github上做大改
-                  1. 增加margin负值范围
-                  2. margin/padding增加15px/30px组
-                  3. 中文字体改成英文字符表示，例如“微软雅黑” → "microsoft yahei"
-                  4. 新增border系列, background-color系列, width(fixed value/percent value)系列以及.ell以下所有样式
-* 2013-07-31 v2.1 inline_any等12px字体大小限制去除，inline_box的-3px间距缩进改成-.25em, 以便适应各种字体大小环境
-* 2013-09-13 v2.2 12px字体大小限制修改为1px笔误了，应该为1em, 删除-ms-transition
-* 2013-10-11 v2.3 float_seven一直没删除，清掉。增加两个绝对定位隐藏：abs_out和abs_clip
-* 2013-11-23 v2.4 add p0, ova, f18. 去除trans中-moz-和-o-私有前缀
-* 2014-02-26 v2.5 fix two name mistake
-* 2014-02-27 v2.6 add fl
-* 2015-02-08 v2.7 具体改动有：
-                  1. 添加h0
-                  2. 修改 .vn -2px → -4px
-                  3. zoom增加webkit重绘修复
-                  4. 去除.trans非webkit私有前缀
-                  5. loading背景图使用about:blank代替
-* 2015-02-09 v2.8 具体改动有：
-                  1. 添加.lh0
-                  2. 移除.f10, .f13, 添加f28，因为现代web站点字号越来越大
-                  3. .n添加white-space: normal声明
-                  4. 移除.vn使用具体负值代替，因为图标+不同字号，vertical-align的负值也不同，新增.v-1 ~ .v-5 按钮与文字的垂直对齐也可使用，兼容IE6+
-                  5. 移除.z中-webkit-transform: translateZ(0)此声明虽然能修复一些重绘问题，但同时也会带来垂直位置，position:fixed限制，影响overflow对absolute元素限制等一系列问题，移除之~
-                  6. 移除cell_bk, 若遭遇不换行问题，使用.cell_ovh代替~
-                  7. .trans中时间0.3s → .3s
-                  8. .disabled禁用大改造，使适用性更广泛
-                  9. 增加.opa0 透明度0
-                  10. float percent more accurate for IE8+
-* 2016-03-25 v2.9 本次改动有：
-                  1. fix w300宽度值为280px的错误
-                  2. dib增加div,p等标签的IE7特别处理，之前建议使用inline_any
-                  3. add h30, lh30，因为随着大屏普及，页面元素尺寸更大了
-                  4. transition时间从.3s → .15s
-                  5. pointer-events增加-ms-私有前缀for IE10+
-*/
-
+/* fork:https://github.com/l0f5c7bf/zxx.lib.css 根据个人习惯调整，顺手就好，如非必要，请不要再项目中修改此文件 */
 /* ---------------------single CSS----------------------- */
+
+/*危险属性*/
+.hide{display: none !important;}
+.show{display: block !important;}
 /* display */
-.dn{display:none;}
-.di{display:inline;}
-.db{display:block;}
-.dib{display:inline-block;}
-div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), using 'inline_any' instead */
+.dn,.none{display:none;}
+.di,.inline{display:inline;}
+.db,.block{display:block;}
+.dib,.inline-block{display:inline-block;}
 /* height */
 .h0{height:0;}
 .h14{height:14px;}
@@ -65,6 +23,7 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .h22{height:22px;}
 .h24{height:24px;}
 .h30{height:30px;}
+.h40{height: 40px;}
 /* width */
 /* fixed width value */
 .w20{width:20px;}
@@ -89,21 +48,15 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .w640{width:640px;}
 .w700{width:700px;}
 /* percent width value */
-.pct10{width:10%;}
-.pct15{width:15%;}
-.pct20{width:20%;}
-.pct25{width:25%;}
-.pct30{width:30%;}
-.pct33{width:33.3%;}
-.pct40{width:40%;}
-.pct50{width:50%;}
-.pct60{width:60%;}
-.pct66{width:66.6%;}
-.pct70{width:70%;}
-.pct75{width:75%;}
-.pct80{width:80%;}
-.pct90{width:90%;}
-.pct100{width:100%;}
+.w1{width:10%;}
+.w2{width:20%;}
+.w3{width:30%;}
+.w4{width:40%;}
+.w5{width:50%;}
+.w6{width:60%;}
+.w7{width:70%;}
+.w8{width:80%;}
+.w9{width:90%;}
 /* line-height */
 .lh0{line-height:0;}
 .lh14{line-height:14px;}
@@ -113,6 +66,7 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .lh22{line-height:22px;}
 .lh24{line-height:24px;}
 .lh30{line-height:30px;}
+.lh40{line-height: 40px;}
 /* margin */
 .m0{margin:0;}
 .ml1{margin-left:1px;}
@@ -122,6 +76,7 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .ml15{margin-left:15px;}
 .ml20{margin-left:20px;}
 .ml30{margin-left:30px;}
+.ml40{margin-left:40px;}
 .mr1{margin-right:1px;}
 .mr2{margin-right:2px;}
 .mr5{margin-right:5px;}
@@ -129,6 +84,7 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .mr15{margin-right:15px;}
 .mr20{margin-right:20px;}
 .mr30{margin-right:30px;}
+.mr40{margin-right:40px;}
 .mt1{margin-top:1px;}
 .mt2{margin-top:2px;}
 .mt5{margin-top:5px;}
@@ -136,6 +92,7 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .mt15{margin-top:15px;}
 .mt20{margin-top:20px;}
 .mt30{margin-top:30px;}
+.mt40{margin-top:40px;}
 .mb1{margin-bottom:1px;}
 .mb2{margin-bottom:2px;}
 .mb5{margin-bottom:5px;}
@@ -143,6 +100,7 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .mb15{margin-bottom:15px;}
 .mb20{margin-bottom:20px;}
 .mb30{margin-bottom:30px;}
+.mb40{margin-bottom:40px;}
 /* margin negative */
 .ml-1{margin-left:-1px;}
 .mr-1{margin-right:-1px;}
@@ -193,36 +151,28 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .pt30{padding-top:30px;}
 .pr30{padding-right:30px;}
 .pb30{padding-bottom:30px;}
+.pl40{padding-left:40px;}
+.pt40{padding-top:40px;}
+.pr40{padding-right:40px;}
+.pb40{padding-bottom:40px;}
 /* border-color name rule: border(b)-position(l/r/t/b/d)-width(null/2)-style(null/sh)-color(first one letter/first two letter) |-> All colors are safe color*/
-.bdc{border:1px solid #ccc;}
-.blc{border-left:1px solid #ccc;}
-.brc{border-right:1px solid #ccc;}
-.btc{border-top:1px solid #ccc;}
-.bbc{border-bottom:1px solid #ccc;}
-.bdd{border:1px solid #ddd;}
-.bld{border-left:1px solid #ddd;}
-.brd{border-right:1px solid #ddd;}
-.btd{border-top:1px solid #ddd;}
-.bbd{border-bottom:1px solid #ddd;}
-.bde{border:1px solid #eee;}
-.ble{border-left:1px solid #eee;}
-.bre{border-right:1px solid #eee;}
-.bte{border-top:1px solid #eee;}
-.bbe{border-bottom:1px solid #eee;}
-/* background-color name rule: bg - (key word/Hex color) |-> All colors are safe color */
-.bgwh{background-color:#fff;}
-.bgfb{background-color:#fbfbfb;}
-.bgf5{background-color:#f5f5f5;}
-.bgf0{background-color:#f0f0f0;}
-.bgeb{background-color:#ebebeb;}
-.bge0{background-color:#e0e0e0;}
+.bas{border:1px solid #eee;}
+.bls{border-left:1px solid #eee;}
+.brs{border-right:1px solid #eee;}
+.bts{border-top:1px solid #eee;}
+.bbs{border-bottom:1px solid #eee;}
+.bad{border:1px dashed #eee;}
+.bld{border-left: 1px dashed #eee;}
+.brd{border-right: 1px dashed #eee;}
+.btd{border-top: 1px dashed #eee;}
+.bbd{border-bottom: 1px dashed #eee;}
 /* safe color */
 .g0{color:#000;}
 .g3{color:#333;}
 .g6{color:#666;}
 .g9{color:#999;}
 .gc{color:#ccc;}
-.wh{color:white;}
+.gf{color:#fff;}
 /* font-size */
 .f0{font-size:0;}
 .f12{font-size:12px;}
@@ -233,29 +183,13 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .f20{font-size:20px;}
 .f24{font-size:24px;}
 .f28{font-size:28px;}
-/* font-family */
-.fa{font-family:Arial;}
-.ft{font-family:Tahoma;}
-.fv{font-family:Verdana;}
-.fs{font-family:Simsun;}
-.fl{font-family:'Lucida Console';}
-.fw{font-family:'Microsoft Yahei';}
 /* font-style */
-.n{font-weight:normal; font-style:normal; white-space: normal;}
-.b{font-weight:bold;}
-.i{font-style:italic;}
+.fn{font-weight:normal; font-style:normal; white-space: normal;}
 /* text-align */
 .tc{text-align:center;}
 .tr{text-align:right;}
 .tl{text-align:left;}
 .tj{text-align:justify;}
-/* text-decoration */
-.tdl{text-decoration:underline;}
-.tdn,.tdn:hover,.tdn a:hover,a.tdl:hover{text-decoration:none;}
-/* letter-spacing */
-.lt-1{letter-spacing:-1px;}
-.lt0{letter-spacing:0;}
-.lt1{letter-spacing:1px;}
 /* white-space */
 .nowrap{white-space:nowrap;}
 /* word-wrap */
@@ -271,37 +205,71 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .v-4{vertical-align:-4px;}
 .v-5{vertical-align:-5px;}
 /* float */
-.l{float:left;}
-.r{float:right;}
+.l,.fl{float:left;}
+.r,.fr{float:right;}
 /* clear */
 .cl{clear:both;}
 /* position */
-.rel{position:relative;}
-.abs{position:absolute;}
+.relative,.pr{position:relative;}
+.absolute,.pa{position:absolute;}
 /*z-index*/
-.zx1{z-index:1;}
-.zx2{z-index:2;}
+.zi1{z-index:1;}
+.zi2{z-index:2;}
 /* cursor */
-.poi{cursor:pointer;}
-.def{cursor:default;}
+.cp{cursor:pointer;}
 /* overflow */
-.ovh{overflow:hidden;}
-.ova{overflow:auto;}
+.oh{overflow:hidden;}
+.oa{overflow:auto;}
 /* visibility */
 .vh{visibility:hidden;}
 .vv{visibility:visible;}
 /* opacity */
-.opa0{opacity:0; filer:alpha(opacity=0);}
+.o0{opacity:0; filer:alpha(opacity=0);}
 /* zoom */
-.z{*zoom:1;}
-
-
+.z1{*zoom:1;}
+/*背景色*/
+.bg-navy{background-color: #001f3f;}
+.bg-blue{background-color: #0074d9;}
+.bg-aqua{background-color: #7fdbff;}
+.bg-teal{background-color: #39cccc;}
+.bg-olive{background-color: #3d9970;}
+.bg-green{background-color: #2ecc40;}
+.bg-lime{background-color: #01ff70;}
+.bg-yellow{background-color: #ffdc00;}
+.bg-orange{background-color: #ff851b;}
+.bg-red{background-color: #ff4136;}
+.bg-fuchsia{background-color: #f012be;}
+.bg-purple{background-color: #b10dc9;}
+.bg-maroon{background-color: #85144b;}
+.bg-white{background-color: #fff;}
+.bg-gray{background-color: #aaa;}
+.bg-silver{background-color: #ddd;}
+.bg-black{background-color: #111;}
+/* 字体颜色 */
+.navy{color: #001f3f;}
+.blue{color: #0074d9;}
+.aqua{color: #7fdbff;}
+.teal{color: #39cccc;}
+.olive{color: #3d9970;}
+.green{color: #2ecc40;}
+.lime{color: #01ff70;}
+.yellow{color: #ffdc00;}
+.orange{color: #ff851b;}
+.red{color: #ff4136;}
+.fuchsia{color: #f012be;}
+.purple{color: #b10dc9;}
+.maroon{color: #85144b;}
+.white{color: #fff;}
+.silver{color: #ddd;}
+.gray{color: #aaa;}
+.black{color: #111;}
+/*12列百分比列*/ .col-12{width: 100%} .col-11{width: 91.66666667%} .col-10{width: 83.33333333%} .col-9{width: 75%} .col-8{width: 66.66666667%} .col-7{width: 58.33333333%} .col-6{width: 50%} .col-5{width: 41.66666667%} .col-4{width: 33.33333333%} .col-3{width: 25%} .col-2{width: 16.66666667%} .col-1{width: 8.33333333%}
 /* ------------------- multiply CSS ------------------ */
 /* 块状元素水平居中 */
-.auto{margin-left:auto; margin-right:auto;}
+.auto,.container{margin-left:auto; margin-right:auto;}
 /* 清除浮动*/
-.fix{*zoom:1;}
-.fix:after{display:table; content:''; clear:both;}
+.fix,.clearfix{*zoom:1;}
+.fix:after,.clearfix:after{display:table; content:''; clear:both;}
 /* 基于display:table-cell的自适应布局 */
 .cell{display:table-cell; *display:inline-block; width:2000px; *width:auto;}
 /* 双栏自适应cell部分连续英文字符换行 */
@@ -309,10 +277,7 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 /* 单行文字溢出虚点显 示*/
 .ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 /* css3过渡动画效果 */
-.trans{
-	-webkit-transition:all .15s;	
-	        transition:all .15s;
-}
+.trans{-webkit-transition:all .15s; transition:all .15s;}
 /* 大小不定元素垂直居中 */
 .dib_vm{display:inline-block; width:0; height:100%; vertical-align:middle;}
 /* 加载中背景图片 - 如果您使用该CSS小库，务必修改此图片地址 */
@@ -324,14 +289,3 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .abs_clip{position:absolute; clip:rect(0 0 0 0);}
 /* 按钮禁用 */
 .disabled{outline:0 none; cursor:default!important; opacity:.4; filer:alpha(opacity=40); -ms-pointer-events:none; pointer-events:none;}
-/*inline-block与float等宽列表*/
-.inline_box{font-size:1em; letter-spacing:-.25em; font-family:Arial;}
-.inline_two, .inline_three, .inline_four, .inline_five, .inline_six, .inline_any{display:inline-block; *display:inline; letter-spacing:0; vertical-align:top; *zoom:1;}
-.float_two, .float_three, .float_four, .float_five, .float_six{float:left;}
-.inline_two, .float_two{width:50%; *width:49.9%;}
-.inline_three, .float_three{width:33.33333%; *width:33.3%;}
-.inline_four, .float_four{width:25%; *width:24.9%;}
-.inline_five, .float_five{width:20%; *width:19.9%;}
-.inline_six, .float_six{width:16.66666%; *width:16.6%;}
-.inline_fix{display:inline-block; width:100%; height:0; overflow:hidden;}
-
