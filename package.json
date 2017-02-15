@@ -1,0 +1,25 @@
+{
+  "name": "zxx.lib.css",
+  "version": "2.10",
+  "description": "a css library for quick layout, especially for flow layout",
+  "main": "zxx.lib.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangxinxu/zxx.lib.css.git"
+  },
+  "keywords": [
+    "css",
+    "zxx.lib.css"
+  ],
+  "author": "zhangxinxu",
+  "license": [{
+	 "type": "MIT",
+     "url": "https://github.com/zhangxinxu/zxx.lib.css/blob/master/LICENSE.md" 
+  }],
+  "bugs": {
+    "url": "https://github.com/zhangxinxu/zxx.lib.css/issues",
+	  "email" : "zhangxinxu@zhangxinxu.com"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

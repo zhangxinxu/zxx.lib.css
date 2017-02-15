@@ -47,6 +47,8 @@
                   3. add h30, lh30，因为随着大屏普及，页面元素尺寸更大了
                   4. transition时间从.3s → .15s
                   5. pointer-events增加-ms-私有前缀for IE10+
+* 2017-02-15 v2.10 本次改动
+                  1. 修正.h16应该是.h14的问题
 */
 
 /* ---------------------single CSS----------------------- */
@@ -58,7 +60,7 @@
 div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), using 'inline_any' instead */
 /* height */
 .h0{height:0;}
-.h16{height:14px;}
+.h14{height:14px;}
 .h16{height:16px;}
 .h18{height:18px;}
 .h20{height:20px;}
@@ -310,8 +312,8 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 /* css3过渡动画效果 */
 .trans{
-	-webkit-transition:all .15s;	
-	        transition:all .15s;
+    -webkit-transition:all .15s;	
+            transition:all .15s;
 }
 /* 大小不定元素垂直居中 */
 .dib_vm{display:inline-block; width:0; height:100%; vertical-align:middle;}
