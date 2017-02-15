@@ -15,6 +15,20 @@ I recommend that <code>zxx.lib.css</code> should put behind after other CSS file
 <pre>&lt;link href="a.css" rel="stylesheet" /&gt;
 &lt;link href="b.css" rel="stylesheet" /&gt;
 &lt;link href="zxx.lib.css" rel="stylesheet" /&gt;</pre>
+
 License
 --------------------------
-What's this? ![疑问](http://mat1.gtimg.com/www/mb/images/face/32.gif "疑问表情")
+MIT
+
+Donate
+------------------
+<table>
+	<tr>
+		<th align="center">支付宝</th>
+		<th align="center">微&nbsp;&nbsp;信</th>
+	</tr>
+	<tr>
+		<td align="center"><img src="http://www.zhangxinxu.com/alipay.png" width="145" height="145"></td>
+		<td align="center"><img src="http://www.zhangxinxu.com/wxpay.png" width="145" height="145"></td>
+	</tr>
+</table>
