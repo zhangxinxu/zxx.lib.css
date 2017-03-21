@@ -108,7 +108,7 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .pct100{width:100%;}
 /* line-height */
 .lh0{line-height:0;}
-.lh16{line-height:14px;}
+.lh14{line-height:14px;}
 .lh16{line-height:16px;}
 .lh18{line-height:18px;}
 .lh20{line-height:20px;}
